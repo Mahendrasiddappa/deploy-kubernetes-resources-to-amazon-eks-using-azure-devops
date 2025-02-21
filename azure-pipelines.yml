@@ -13,7 +13,7 @@ steps:
     - task: AWSCLI@1
       displayName: "Running aws-cli get-caller-identity"
       inputs:
-        awsCredentials: "aws-oidc-federation"
+        awsCredentials: "AWS"
         regionName: 'aws-region-name'
         awsCommand: 'sts'
         awsSubCommand: 'get-caller-identity'
