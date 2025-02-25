@@ -78,7 +78,7 @@ jobs:
           docker_ctx=$(dirname $(dockerfilePath))
 
           # Build Docker Image
-          docker build --quiet -t $(ecr.REPOSITORY_URI):$(imageTag) -f $(dockerfilePath) $docker_ctx
+          docker build -t $(ecr.REPOSITORY_URI):$(imageTag) -f $(dockerfilePath) $docker_ctx
 
         failOnStderr: true
         displayName: 'Docker Build'
