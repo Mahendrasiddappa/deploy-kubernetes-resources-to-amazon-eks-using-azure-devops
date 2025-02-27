@@ -75,6 +75,9 @@ jobs:
               chartPackage=${{ parameters.projectName }}-$(helmChartVersion).tgz
               echo "Current directory: $(pwd)"
               echo "Chart package to be installed: $chartPackage"
+
+              helm version
+              helm ls 
               
               helm_upgrade_output=$(helm upgrade \
                 --namespace $(K8sNamespace) \
