@@ -80,6 +80,10 @@ jobs:
           # Build Docker Image
           docker build --quiet -t $(ecr.REPOSITORY_URI):$(imageTag) -f $(dockerfilePath) $docker_ctx
 
+          2> >(while read line; do (>&2 echo "STDERROR: $line"); done)
+
+
+
         failOnStderr: true
         displayName: 'Docker Build'
 
