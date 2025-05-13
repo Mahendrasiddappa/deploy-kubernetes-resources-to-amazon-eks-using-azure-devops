@@ -19,5 +19,5 @@ stages:
   parameters:
     serviceConnectionName: aws
     awsRegion: us-east-1
-    awsEKSClusterName: keda
+    awsEKSClusterName: cluster-in-existing-vpc
     projectName: webapp
